@@ -16,5 +16,22 @@ def calculate_average_distance(data_points):
         return 0
     # preventing ZeroDivisionError
     else:
-        average = sum(data_points) / len(data_points)
-    return average
+        average_distance = sum(data_points) / len(data_points)
+    return average_distance
+
+
+def navigate_robot(single_data, threshold):
+    data_points = collect_sensor_data(single_data, navigate_robot.data_points)
+    navigate_robot.data_points = data_points
+
+    average_distance = calculate_average_distance(data_points)
+
+    if average_distance > threshold:
+        return "Stop"
+
+    else:
+        return "Continue"
+
+
+# Initialize the data_points attribute of navigate_robot function
+navigate_robot.data_points = []
