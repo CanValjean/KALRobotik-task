@@ -39,3 +39,5 @@ This function handles  creating a test environment for simulating reception of a
 ## sample_test_navigate_robot
 This function uses the average distance of the received sensor data list to determine whether the robot should "Continue" or "Stop". The function takes two arguments: the average distance of the given data list and the predefined threshold (in this case, 10cm). If the average distance is less than the threshold, the function returns "Stop". Otherwise, it returns "Continue".
 
+## Sample Output
+![terminal_ss](https://github.com/CanValjean/KALRobotik-task/assets/133167069/b671167e-6d0f-4e67-8932-13f10dbe7b54 "Sample Output")
