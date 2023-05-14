@@ -31,3 +31,11 @@ This function uses the average distance to determine whether the robot should "C
 5. []
 0
 
+In addition 2 other functions are written for test purposes. These are:
+
+## sample_test_collect_sensor_data
+This function handles  creating a test environment for simulating reception of a data list such as the samples given from the sensor and storing it. The function takes two arguments: a sensor data list and a list of previous data points. The function appends the sensor data list to the list of previous data points. If the length of the list exceeds 20, the first data point is removed.
+
+## sample_test_navigate_robot
+This function uses the average distance of the received sensor data list to determine whether the robot should "Continue" or "Stop". The function takes two arguments: the average distance of the given data list and the predefined threshold (in this case, 10cm). If the average distance is less than the threshold, the function returns "Stop". Otherwise, it returns "Continue".
+
